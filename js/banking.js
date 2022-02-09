@@ -13,7 +13,12 @@ document.getElementById("deposit-button").addEventListener("click", function(e){
     const newDepositTotal = previousDepositAmount + newDepositAmount;
     depositTotal.innerText = newDepositTotal;
 
-    
+    // update account Balance
+    const balanceTotal = document.getElementById("balance-total");
+    const balanceTotalText = balanceTotal.innerText;
+    const previousBalanceTotal = parseFloat(balanceTotalText);
+    const newBalanceTotal = previousBalanceTotal + newDepositAmount;
+    balanceTotal.innerText = newBalanceTotal;
 
     // clear deposit input field
     depositInput.value = "";
